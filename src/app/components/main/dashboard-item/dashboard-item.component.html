@@ -1,0 +1,9 @@
+  <li class="otherMovies">
+    <h3>{{movie.title}}</h3>
+    <p>Genre: {{movie.genre}}</p>
+    <p class="img"><img src={{movie.image}}></p>
+    <button class="button" (click)="onClick()">Favorite movie</button>
+    <a class="button" [routerLink]="['/details', movie.id]">Details</a>
+</li>
+
+

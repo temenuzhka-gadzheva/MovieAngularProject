@@ -1,0 +1,120 @@
+{
+  "users": [
+    {
+      "username": "marty",
+      "password": "1234567",
+      "id": 1
+    },
+    {
+      "username": "niki",
+      "password": "12345",
+      "id": 2
+    },
+    {
+      "username": "ivo",
+      "password": "1234567",
+      "id": 3
+    }
+  ],
+  "movies": [
+    {
+      "id": 1,
+      "title": "Black Widow",
+      "summary": "The action of the Black Widow takes place shortly after the events of the First Avenger: The War of the Heroes, when the Avengers are separated and some of them are in disgrace, including the Black Widow. Natasha Romanoff is forced to flee the law, but at the same time, for the first time in her life, she acts freely and decides her own destiny. We also meet her `family`, including Black Widows Jelena Belova (Florence Pew), who is Natasha's sister, and the older, spy-baked Milena Vostokov (Rachel Weiss), who is part of a mysterious scientific experiment. , as well as the figure of their father, Alexei Shostakov (David Harbor), known as the Red Guardian - the Russian equivalent of Captain America.",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/914MHuDfMSL.jpg",
+      "director": "Kate Shortland",
+      "country": "USA",
+      "year": 2021,
+      "duration": 12,
+      "genre": "Fiction"
+    },
+    {
+      "id": 2,
+      "title": "Agent Salt",
+      "summary": "Evelyn Salt (Angelina Jolie) is a CIA agent who has taken an oath of allegiance to the Russian spy. clear his name and prove that he is a true patriot. Salt must avoid her own capture and save her husband or the most influential forces will erase every trace of her.",
+      "image": "https://m.media-amazon.com/images/M/MV5BMjIyODA2NDg4NV5BMl5BanBnXkFtZTcwMjg4NDAwMw@@._V1_FMjpg_UX1000_.jpg",
+      "director": "Philip Neuss",
+      "country": "USA",
+      "year": 2010,
+      "duration": 100,
+      "genre": "Action"
+    },
+    {
+      "id": 3,
+      "title": "Castle",
+      "summary": "The crime drama 'Castle' introduces us to the writer Richard Castle, who is the author of a successful series of criminal mysteries. However, one of the fans took the novels too seriously and started killing people by imitating the stories from Castle's books. This was noticed by the police and the author of the books was included in the team working to solve the case, so the detectives and the writer began to investigate a series of murders in New York. Starring Nathan Fillion, he is best known for his role in Joss Whedon's sci-fi series Firefly and the failed series Drive.",
+      "image": "https://m.media-amazon.com/images/M/MV5BMjM2NjU0ODU0NF5BMl5BanBnXkFtZTgwMDAwMzg5NjE@._V1_.jpg",
+      "director": "Andrew Marlowe",
+      "country": "USA",
+      "year": 2009,
+      "duration": 43,
+      "genre": "Criminal"
+    },
+    {
+      "id": 9,
+      "title": "The Tourist",
+      "summary": "In The Tourist, Frank (Johnny Depp) is an American tourist who visits Italy to heal his broken heart. Eliza (Angelina Jolie) is an extraordinary woman who deliberately crosses his path for her own purposes. Against the backdrop of dizzying Venice, Frank embarks on a pursuit of a romance, but it soon turns out that he himself is a persecution after he and Eliza are trapped in a whirlpool of intrigue and danger. The film follows a series of manipulations, as the characters eventually realize that they are just little pawns, ruled by an invisible conspirator.",
+      "image": "https://m.media-amazon.com/images/I/910A+wjqAjL._SY445_.jpg",
+      "director": "Florian Henkel von Donnersmark",
+      "country": "USA, Great Britain, Italy, France",
+      "year": 2010,
+      "duration": 104,
+      "genre": "Romantic"
+    },
+    {
+      "id": 12,
+      "title": "Anna and the king",
+      "summary": "Oscar winner Jody Foster (\"The Silence of the Lambs\", \"Contact\") and Chow Yun-Fat play the lead roles in this epic retelling of a classic story from a real case. When the English teacher Anna Lionouens arrived in the exotic state of Siam to raise King Mongkut's children, her Western views clashed with the ruler's Eastern traditions.\nTensions escalate as Mongkut learns that outside forces are plotting against his rule. Faced with the inevitable outbreak of political intrigue, Anna and the king must become allies in the daring struggle to save Siam from dangerous enemies determined to destroy it.\n\"Anna and the King\" follows the tradition of \"Braveheart\" and \"The English Patient\" - an impressive masterpiece full of passions and adventures.",
+      "image": "https://m.media-amazon.com/images/I/511RJ1BPK7L.jpg",
+      "director": "Andy Tennant",
+      "country": "USA",
+      "year": 1999,
+      "duration": 147,
+      "genre": "Drama"
+    },
+    {
+      "id": 13,
+      "title": "Vampire Diaries",
+      "summary": "Four months after the tragic car accident that killed their parents, 17-year-old Elena Gilbert and her 15-year-old brother, Jeremy, are still adjusting to their new reality. Elena has always been the star student; beautiful, popular and involved with school and friends, but now she finds herself struggling to hide her grief from the world.\nAs the school year begins at Mystic Falls High School, Elena and her friends are fascinated by a handsome and mysterious new student, Stefan Salvatore. What she doesn't realize is that Stefan is hiding a dark, deadly secret of his own – the fact that he's a 161 year old vampire. \nFearing that he knows who is responsible for the attack, Stefan returns home and finds his older brother, Damon, whom he hasn't seen for 15 years. Damon is also a vampire, and the two brothers have a long and bitter history. Now these two vampire brothers – one good, one evil – are at war for Elena's soul and for the souls of her friends, family and all the residents of Mystic Falls, Virginia.",
+      "image": "https://upload.wikimedia.org/wikipedia/en/2/22/The-vampire-diaries-season-2-dvd_558x754.jpg",
+      "director": " Kevin Williamson and Julie Pleck",
+      "country": "USA",
+      "year": 2009,
+      "duration": 42,
+      "genre": "Drama"
+    },
+    {
+      "id": 14,
+      "title": "Avengers: Infinity War",
+      "summary": "In 10 years, Thanos is finally on his way to collecting all the Stones of Infinity to gain a single hegemony over the universe. And to stop it, the Avengers alone will not be enough. That's why Guardians of the Galaxy, Dr. Strange, Spider-Man and a number of other favorite superheroes come to the rescue, including Marvel's latest addition to the Black Panther and his entourage. \"The Avengers: Endless War\" brings together all the characters we've seen in an epic finale. But will they be willing to sacrifice everything to defeat the greatest threat they have ever faced? If Thanos brings together all six Stones of Infinity, the universe we know will be irreversibly changed. The unprecedented film adventure, which lasted ten years and covered the entire Marvel film universe, will culminate in a spectacular and large-scale deadly battle in The Avengers: War Without End. The Avengers and their superhero allies must be willing to sacrifice everything they have to stop the omnipotent Thanos once and for all before completing his plan to destroy the universe.",
+      "image": "https://cdnb.artstation.com/p/assets/images/images/038/749/151/4k/nima-neemz-nakhshab-avengers.jpg?1623946339",
+      "director": "Anthony Rousseau  and  Joe Rousseau",
+      "country": "USA",
+      "year": 2018,
+      "duration": 149,
+      "genre": "Adventurous"
+    },
+    {
+      "id": 15,
+      "title": "Murdoch Christmas Mysteries ",
+      "summary": "As he investigates the murder of a wealthy philanthropist and the theft of children's gifts at a Christmas charity contest, Murdoch discovers that a Christmas monster may have been involved.",
+      "image": "https://m.media-amazon.com/images/I/911hvwIivLL._SL1500_.jpg",
+      "director": "Michael McGowan",
+      "country": "Canada",
+      "year": 2015,
+      "duration": 45,
+      "genre": "Criminal"
+    },
+    {
+      "id": 16,
+      "title": "Love Hard",
+      "summary": "A girl from Los Angeles, who is unlucky in love, falls in love with a boy from the East Coast in a dating app and decides to surprise him for the holidays.",
+      "image": "https://m.media-amazon.com/images/M/MV5BODIwNDIxN2YtMWU3ZS00MjU5LWIxMzctNmY1NDg5NDgwYmM0XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+      "director": "Hernan Jimenez",
+      "country": "USA",
+      "year": 2021,
+      "duration": 104,
+      "genre": "Romantic"
+    }
+  ]
+}

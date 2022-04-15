@@ -1,0 +1,75 @@
+ <section id="create-page" class="create">
+    <form id="create-form" *ngIf="formGroup"
+    [formGroup]="formGroup"
+    (ngSubmit)="onSubmit()">
+        <fieldset class="forms">
+            <legend>Add new Movie</legend>
+            <p class="field">
+                <label for="title">Title</label>
+                <span class="input">
+                    <input type="text" name="title" id="title" placeholder="Title"  formControlName="title">
+                </span>
+            </p>
+            <p class="field">
+                <label for="summary">Summary</label>
+                <span class="input">
+                    <textarea name="summary" id="description" placeholder="Summary"  formControlName="summary"></textarea>
+                </span>
+            </p>
+            <p class="field">
+                <label for="image">Image</label>
+                <span class="input">
+                    <input type="text" name="imageUrl" id="image" placeholder="Image" formControlName="image">
+                </span>
+            </p>
+
+            <p class="field">
+                <label for="director">Director</label>
+                <span class="input">
+                    <input type="text" name="director" id="title" placeholder="director name"  formControlName="director">
+                </span>
+            </p>
+            <p class="field">
+                <label for="country">Country</label>
+                <span class="input">
+                    <input type="text" name="country" id="title" placeholder="country name"  formControlName="country">
+                </span>
+            </p>
+            <p class="field">
+                <label for="year">Year</label>
+                <span class="input">
+                    <input type="number" name="year" id="title" placeholder="year "  formControlName="year">
+                </span>
+            </p>
+            <p class="field">
+                <label for="duration">Duration</label>
+                <span class="input">
+                    <input type="number" name="duration" id="title" placeholder="duration"  formControlName="duration">
+                </span>
+            </p>
+            <p class="field">
+                <label for="Genre">Genre</label>
+                <span class="input">
+                    <select id="type" name="Genre"  formControlName="genre" >
+                        <option value="Animation">Animation</option>
+                        <option value="Biographical">Biographical</option>
+                        <option value="Bulgarian">Bulgarian</option>
+                        <option value="Documentary">Documentary</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Action">Action</option>
+                        <option value="Historical">Historical</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Criminal">Criminal</option>
+                        <option value="Musical">Musical</option>
+                        <option value="Adventurous">Adventurous</option>
+                        <option value="Romantic">Romantic</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Fiction">Fiction</option>
+                    </select>
+                </span>
+            </p>
+        
+            <input class="button submit" type="submit" value="Add Movie">
+        </fieldset>
+    </form>
+</section>

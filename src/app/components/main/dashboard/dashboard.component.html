@@ -1,0 +1,36 @@
+<ng-container *ngIf="!favoriteMovie ; else templateA">
+
+    <section id="dashboard-page" class="dashboard" display="inline-flex">
+        <h1>Welcome to the world of film art</h1>
+        <ul class="other-movies-list">
+        </ul>
+    </section>
+
+    <app-dashboard-item 
+            *ngFor="let movie of movies" [movie]="movie" (movieClicked)="onMarkAsFavorite($event)">
+    </app-dashboard-item>
+
+</ng-container>
+
+<ng-template #templateA>
+    <section id="dashboard-page" class="dashboard">
+        <h1>My favorite movie</h1>
+        <ul class="other-movies-list">
+
+            <div class="movie-information">
+                <h3>{{favoriteMovie?.title || '-' }}</h3>
+                <p class="type">Director: {{favoriteMovie?.director || '-' }}</p>
+                <p class="type">Country: {{favoriteMovie?.country || '-' }}</p>
+                <p class="type">Year: {{favoriteMovie?.year || '-'}}</p>
+                <p class="type">Duration: {{favoriteMovie?.duration || '-'}} min</p>
+                <p class="type">Genre: {{favoriteMovie?.genre || '-'}}</p>
+                <p class="img"><img src={{favoriteMovie?.image}}></p>
+            </div>
+
+            <div class="movie-description">
+                <h3>Summary:</h3>
+                <p>{{favoriteMovie?.summary || '-'}}</p>
+            </div>
+        </ul>
+    </section>
+</ng-template>

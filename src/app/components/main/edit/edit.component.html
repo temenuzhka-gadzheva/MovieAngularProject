@@ -1,0 +1,76 @@
+<section id="edit-page" class="edit">
+    <form id="edit-form"
+    *ngIf="formGroup"
+    [formGroup]="formGroup"
+    (ngSubmit)="onSubmit()">
+        <fieldset>
+            <legend>Edit my Movie</legend>
+            <p class="field">
+                <label for="title">Title</label>
+                <span class="input">
+                    <input type="text" name="title" id="title" placeholder="Title"  formControlName="title" value="{movie.title}">
+                </span>
+            </p>
+            <p class="field">
+                <label for="summary">Summary</label>
+                <span class="input">
+                    <textarea name="summary" id="description" placeholder="Summary"  formControlName="summary" > movie.summary </textarea>
+                </span>
+            </p>
+            <p class="field">
+                <label for="image">Image</label>
+                <span class="input">
+                    <input type="text" name="imageUrl" id="image" placeholder="Image" formControlName="image" value="{movie.image}">
+                </span>
+            </p>
+
+            <p class="field">
+                <label for="director">Director</label>
+                <span class="input">
+                    <input type="text" name="director" id="title" placeholder="director name"  formControlName="director"value="{movie.director}">
+                </span>
+            </p>
+            <p class="field">
+                <label for="country">Country</label>
+                <span class="input">
+                    <input type="text" name="country" id="title" placeholder="country name"  formControlName="country" value="{movie.country}">
+                </span>
+            </p>
+            <p class="field">
+                <label for="year">Year</label>
+                <span class="input">
+                    <input type="number" name="year" id="title" placeholder="year "  formControlName="year" value="{movie.year}">
+                </span>
+            </p>
+            <p class="field">
+                <label for="duration">Duration</label>
+                <span class="input">
+                    <input type="number" name="duration" id="title" placeholder="duration"  formControlName="duration" value={movie.duration}>
+                </span>
+            </p>
+
+            <p class="field">
+                <label for="Genre">Genre</label>
+                <span class="input" value={movie.genre}>
+                    <select id="type" name="Genre"  value={movie.genre}>
+                        <option value="Animation">Animation</option>
+                        <option value="Biographical">Biographical</option>
+                        <option value="Bulgarian">Bulgarian</option>
+                        <option value="Documentary">Documentary</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Action">Action</option>
+                        <option value="Historical">Historical</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Criminal">Criminal</option>
+                        <option value="Musical">Musical</option>
+                        <option value="Adventurous">Adventurous</option>
+                        <option value="Romantic">Romantic</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Fiction">Fiction</option>
+                    </select>
+                </span>
+            </p>
+            <input class="button submit" type="submit" value="Save">
+        </fieldset>
+    </form>
+</section>

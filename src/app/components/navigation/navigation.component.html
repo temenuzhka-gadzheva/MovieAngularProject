@@ -1,0 +1,19 @@
+<nav class="navbar">
+    <section class="navbar-dashboard">
+        <a class="button-dashboard" href="/dashboard">Dashboard</a>
+        <div id="user" *ngIf="isLoggedIn != null">
+            <span class="span">Welcome</span>
+            <a class="button" href="/create">Add Movie</a>
+            <a class="button" (click)="onLogout()">Logout</a>
+        </div>
+        <div id="guest" *ngIf="isLoggedIn === null">
+            <a class="button" href="/login">Login</a>
+        </div>
+
+    </section>
+</nav>
+
+
+
+
+

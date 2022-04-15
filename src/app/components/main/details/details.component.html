@@ -1,0 +1,19 @@
+ <section id="details-page" class="details">
+    <div class="movie-information">
+        <h3>{{movie.title}}</h3>
+        <p class="type">Director: {{movie.director}}</p>
+        <p class="type">Country: {{movie.country}}</p>
+        <p class="type">Year: {{movie.year}}</p>
+        <p class="type">Duration: {{movie.duration}} min</p>
+        <p class="type">Genre: {{movie.genre}}</p>
+        <p class="img"><img src={{movie.image}}></p>
+        <div class="actions">
+            <a class="button" [routerLink]="['/edit', movie.id]">Edit</a>
+            <a class="button"  (click)="onDelete()">Delete</a>
+        </div>
+    </div>
+    <div class="movie-description" >
+        <h3>Summary:</h3>
+        <p>{{movie.summary}}</p>
+    </div>
+</section>
