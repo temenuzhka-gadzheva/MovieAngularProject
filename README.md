@@ -15,10 +15,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
  1) download the project 
- 2) open a terminal and run the command: npm i to download the necessary packages 
- 3) in the terminal run the command: json-server --watch server-json to start the json server 
- 4) open another terminal and run the command: npm start 
- 5) open a browser and type the following address http: // localhost: 4200/
+ 2) open a terminal and run the command: `npm i` to download the necessary packages 
+ 3) open `src` folder, then open `server` folder and in the terminal run the command: `json-server --watch server-json` to start the json server 
+ 4) open another terminal and run the command: `npm start` 
+ 5) open a browser and type the following address `http://localhost:4200/`
 
 
 ## Further help
