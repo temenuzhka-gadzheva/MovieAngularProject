@@ -1,5 +1,5 @@
 # Stage 1: Build the Angular application
-FROM node:18-alpine as builder
+FROM node:18-alpine AS builder
 
 # Set working directory
 WORKDIR /app
