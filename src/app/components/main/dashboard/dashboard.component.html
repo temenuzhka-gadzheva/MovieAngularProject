@@ -1,22 +1,20 @@
 <ng-container *ngIf="!favoriteMovie ; else templateA">
-
     <section id="dashboard-page" class="dashboard" display="inline-flex">
         <h1>Welcome to the world of film art</h1>
         <ul class="other-movies-list">
+            <app-dashboard-item 
+                *ngFor="let movie of movies" 
+                [movie]="movie" 
+                (movieClicked)="onMarkAsFavorite($event)">
+            </app-dashboard-item>
         </ul>
     </section>
-
-    <app-dashboard-item 
-            *ngFor="let movie of movies" [movie]="movie" (movieClicked)="onMarkAsFavorite($event)">
-    </app-dashboard-item>
-
 </ng-container>
 
 <ng-template #templateA>
     <section id="dashboard-page" class="dashboard">
         <h1>My favorite movie</h1>
         <ul class="other-movies-list">
-
             <div class="movie-information">
                 <h3>{{favoriteMovie?.title || '-' }}</h3>
                 <p class="type">Director: {{favoriteMovie?.director || '-' }}</p>

@@ -1,0 +1,20 @@
+name: Auto Deploy
+
+on:
+  push:
+    branches:
+      - main  # или master, зависи от името на вашия основен клон
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Update and restart containers
+        run: |
+          cd docker
+          docker-compose down
+          docker-compose build --no-cache
+          docker-compose up -d 

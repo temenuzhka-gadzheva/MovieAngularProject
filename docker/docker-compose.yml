@@ -1,0 +1,100 @@
+version: '3.8'
+
+services:
+  webhook:
+    build: 
+      context: ../webhook-service
+      dockerfile: Dockerfile
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ..:/app/MovieAngularProject
+    environment:
+      - WEBHOOK_SECRET=MovieAngularProject_Webhook_2025_SecureKey
+    ports:
+      - "3001:3001"
+    networks:
+      - app-network
+
+  load-balancer:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - app-network
+    depends_on:
+      - app1
+      - app2
+      - app3
+      - app4
+      - app5
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  app1:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: ${DOCKER_USERNAME}/movie-angular-app:latest
+    expose:
+      - "80"
+    networks:
+      - app-network
+    environment:
+      - INSTANCE_NAME=angular-app-1
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  app2:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: ${DOCKER_USERNAME}/movie-angular-app:latest
+    networks:
+      - app-network
+    environment:
+      - INSTANCE_NAME=angular-app-2
+
+  app3:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: ${DOCKER_USERNAME}/movie-angular-app:latest
+    networks:
+      - app-network
+    environment:
+      - INSTANCE_NAME=angular-app-3
+
+  app4:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: ${DOCKER_USERNAME}/movie-angular-app:latest
+    networks:
+      - app-network
+    environment:
+      - INSTANCE_NAME=angular-app-4
+
+  app5:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: ${DOCKER_USERNAME}/movie-angular-app:latest
+    networks:
+      - app-network
+    environment:
+      - INSTANCE_NAME=angular-app-5
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  consul-data: 
