@@ -20,6 +20,26 @@ Run `ng generate component component-name` to generate a new component. You can 
  4) open another terminal and run the command: `npm start` 
  5) open a browser and type the following address `http://localhost:4200/`
 
+## Continuous Deployment
+This project uses GitHub Actions for continuous deployment. Every push to the main branch triggers an automatic deployment process:
+1. Builds the application
+2. Creates Docker containers
+3. Deploys the updated version
+
+## Development
+To run this project locally:
+1. Clone the repository
+2. Run `npm install`
+3. Run `npm start`
+4. Open `http://localhost:4200`
+
+## Docker
+To run with Docker:
+```bash
+docker-compose up -d
+```
+
+Visit `http://localhost` to see the application.
 
 ## Further help
 
