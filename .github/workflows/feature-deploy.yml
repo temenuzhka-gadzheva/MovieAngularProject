@@ -27,6 +27,4 @@ jobs:
         context: .
         file: ./docker/Dockerfile
         push: true
-        tags: |
-          ${{ secrets.DOCKER_USERNAME }}/angular-app:feature-${{ github.ref_name }}
-          ${{ secrets.DOCKER_USERNAME }}/angular-app:${{ github.sha }} 
+        tags: ${{ secrets.DOCKER_USERNAME }}/angular-app:test-workflow,${{ secrets.DOCKER_USERNAME }}/angular-app:${{ github.sha }} 
