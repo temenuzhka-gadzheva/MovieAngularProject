@@ -3,7 +3,7 @@ name: Auto Deploy
 on:
   push:
     branches:
-      - main  # или master, зависи от името на вашия основен клон
+      - main 
 
 jobs:
   deploy:
