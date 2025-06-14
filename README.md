@@ -41,6 +41,14 @@ docker-compose up -d
 
 Visit `http://localhost` to see the application.
 
+## CI/CD Testing
+To test the CI/CD pipeline:
+1. Make changes to the code
+2. Commit and push to main branch
+3. Check GitHub Actions tab for workflow execution
+4. Verify Docker Hub for new image
+5. Confirm deployment on server
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
