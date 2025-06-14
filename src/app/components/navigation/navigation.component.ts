@@ -5,8 +5,7 @@ import { AuthService } from '../auth/services/auth.service';
 
 @Component({
   selector: 'app-navigation',
-  templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss']
+  templateUrl: './navigation.component.html'
 })
 export class NavigationComponent implements OnInit {
   isLoggedIn = localStorage.getItem("loggedUser");
