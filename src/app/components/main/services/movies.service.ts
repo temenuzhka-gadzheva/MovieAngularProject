@@ -3,6 +3,7 @@ import { Injectable } from "@angular/core";
 import { Observable, tap } from "rxjs";
 import { environment } from "src/environments/environment";
 import { Movie } from "../models/movie.model";
+import { Router } from "@angular/router";
 
 @Injectable({
     providedIn: 'root'
@@ -10,9 +11,9 @@ import { Movie } from "../models/movie.model";
 
 export class MoviesService {
   private instanceId = Math.random().toString(36).substring(7);
-  private url = `${environment.baseUrl}`;
+  private url = `${environment.apiUrl}`;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
     console.log(`[Instance ${this.instanceId}] MoviesService initialized with URL:`, this.url);
   }
 
