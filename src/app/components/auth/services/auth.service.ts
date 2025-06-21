@@ -3,7 +3,7 @@ import { HttpClient, JsonpClientBackend } from '@angular/common/http';
 import { Login } from '../models/login.model';
 import { Observable } from 'rxjs';
 import { User } from '../models/user.model';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 
 
@@ -16,7 +16,7 @@ export class AuthService {
   }
 
   login$(data: Login): Observable<User | null> {
-    return this.http.get<User[]>(`${environment.baseUrl}/users`).pipe(
+    return this.http.get<User[]>(`${environment.apiUrl}/users`).pipe(
       map((response: User[] ) => {
         const user = response.find(u => u.username === data.username && u.password === data.password);
 
@@ -46,5 +46,13 @@ export class AuthService {
   return user;
    
    
+  }
+
+  getUsers(): Observable<User[]> {
+    return this.http.get<User[]>(`${environment.apiUrl}/users`).pipe(
+      tap((data) => {
+        // console.log('Users:', data);
+      })
+    );
   }
 }

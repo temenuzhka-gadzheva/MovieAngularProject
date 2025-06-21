@@ -20,7 +20,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./nginx/load-balancer.conf:/etc/nginx/conf.d/default.conf:ro
     networks:
       - app-network
     depends_on:
@@ -91,6 +91,16 @@ services:
       - app-network
     environment:
       - INSTANCE_NAME=angular-app-5
+
+  json-server:
+    image: node:18-alpine
+    command: npx json-server --watch /data/server.json --host 0.0.0.0
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../src/server:/data
+    networks:
+      - app-network
 
 networks:
   app-network:
